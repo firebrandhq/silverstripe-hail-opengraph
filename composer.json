@@ -1,0 +1,16 @@
+{
+    "name": "firebrand/silverstripe-hail-opengraph",
+    "description": "OpenGraph Extension for the SilverStripe Hail module",
+    "type": "silverstripe-vendormodule",
+    "require": {
+        "tractorcow/silverstripe-opengraph": "^4.0",
+        "firebrandhq/silverstripe-hail": "dev-develop"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Firebrand Limite",
+            "email": "developers@firebrand.nz"
+        }
+    ]
+}
