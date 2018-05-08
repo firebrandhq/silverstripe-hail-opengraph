@@ -5,6 +5,7 @@ namespace Firebrand\HailOG\Extensions;
 use Firebrand\Hail\Models\Article;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
+use SilverStripe\Core\Convert;
 use SilverStripe\ORM\DataExtension;
 use TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired;
 
@@ -43,7 +44,7 @@ class HailPageExtension extends DataExtension implements IOGObjectRequired
             }
         }
 
-        return Director::absoluteURL('resources/vendor/firebrand/silverstripe-hail-opengraph/images/hail-logo.png', true);
+        return Director::absoluteURL('resources/vendor/tractorcow/silverstripe-opengraph/images/logo.gif', true);
     }
 
     public function getOGTitle()
@@ -63,10 +64,10 @@ class HailPageExtension extends DataExtension implements IOGObjectRequired
     public function getOGDescription()
     {
         if ($this->article) {
-            return $this->article->Lead;
+            return Convert::html2raw($this->article->Lead);
         }
 
-        return $this->getOwner()->Content;
+        return Convert::html2raw($this->getOwner()->Content);
     }
 
     public function getOGVideo()
