@@ -21,6 +21,9 @@
     "extra": {
         "expose": [
             "images"
-        ]
+        ],
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
     }
 }
