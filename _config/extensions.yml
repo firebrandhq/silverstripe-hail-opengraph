@@ -1,0 +1,6 @@
+---
+Name: Hail OpenGraph Extensions
+---
+Firebrand\Hail\Pages\HailPage:
+  extensions:
+    - Firebrand\HailOG\Extensions\HailPageExtension

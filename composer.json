@@ -12,5 +12,15 @@
             "name": "Firebrand Limite",
             "email": "developers@firebrand.nz"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Firebrand\\HailOG\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "images"
+        ]
+    }
 }
