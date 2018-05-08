@@ -23,14 +23,13 @@ class HailPageExtension extends DataExtension implements IOGObjectRequired
         }
     }
 
-    public function AbsoluteLink()
+    public function AbsoluteLink(&$link = null)
     {
         if ($this->article) {
-            $url = $this->article->Link();
-            return $url;
+            $link = Director::absoluteURL($this->article->Link(), true);
         }
 
-        return Controller::curr()->Link();
+        return $link;
     }
 
     public function getOGImage()
@@ -58,6 +57,24 @@ class HailPageExtension extends DataExtension implements IOGObjectRequired
 
     public function getOGType()
     {
+        return 'website';
+    }
+
+    public function getOGDescription()
+    {
+        if ($this->article) {
+            return $this->article->Lead;
+        }
+
+        return $this->getOwner()->Content;
+    }
+
+    public function getOGVideo()
+    {
+        if ($this->article && $this->article->hasHeroVideo()) {
+            return $this->article->HeroVideo()->OGLink();
+        }
+
         return null;
     }
 }

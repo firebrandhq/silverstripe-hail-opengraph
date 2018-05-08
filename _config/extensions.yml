@@ -1,6 +1,9 @@
 ---
-Name: Hail OpenGraph Extensions
+Name: hail-opengraph-extensions
 ---
 Firebrand\Hail\Pages\HailPage:
   extensions:
     - Firebrand\HailOG\Extensions\HailPageExtension
+Firebrand\Hail\Models\Video:
+  extensions:
+    - Firebrand\HailOG\Extensions\VideoExtension

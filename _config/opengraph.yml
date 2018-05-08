@@ -1,5 +1,5 @@
 ---
-Name: Hail OpenGraph Settings
+Name: hail-opengraph-settings
 After: '#opengraphsettings'
 ---
 TractorCow\OpenGraph\OpenGraph:
