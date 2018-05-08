@@ -4,7 +4,7 @@
     "type": "silverstripe-vendormodule",
     "require": {
         "tractorcow/silverstripe-opengraph": "^4.0",
-        "firebrandhq/silverstripe-hail": "dev-develop"
+        "firebrand/silverstripe-hail": "dev-develop"
     },
     "license": "MIT",
     "authors": [
