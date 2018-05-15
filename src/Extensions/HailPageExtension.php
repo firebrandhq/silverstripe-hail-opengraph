@@ -16,7 +16,7 @@ class HailPageExtension extends DataExtension implements IOGObjectRequired
     public function __construct()
     {
         $params = Controller::curr()->getRequest()->params();
-        if ($params['Action'] === "article" && !empty($params['ID'])) {
+        if (isset($params['Action']) && $params['Action'] === "article" && isset($params['ID']) && !empty($params['ID'])) {
             $article = Article::get()->filter(['HailID' => $params['ID']])->first();
             if ($article) {
                 $this->article = $article;
