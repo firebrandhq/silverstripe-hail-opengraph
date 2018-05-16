@@ -4,6 +4,16 @@ namespace Firebrand\HailOG\Extensions;
 
 use SilverStripe\ORM\DataExtension;
 
+
+/**
+ * Adds Opengrah Support for Hail Video
+ *
+ * see @link {TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired] and @link {TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectExplicit} for fields description
+ *
+ * @package silverstripe-hail-elemental
+ * @author Marc Espiard, Firebrand
+ * @version 1.0
+ */
 class VideoExtension extends DataExtension
 {
     public function OGLink()

@@ -10,9 +10,9 @@
     ],
     "require": {
         "tractorcow/silverstripe-opengraph": "^4.0",
-        "firebrand/silverstripe-hail": "4.0.x-dev"
+        "firebrandhq/silverstripe-hail": "^4.0"
     },
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Firebrand Limited",

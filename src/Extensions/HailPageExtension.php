@@ -9,6 +9,16 @@ use SilverStripe\Core\Convert;
 use SilverStripe\ORM\DataExtension;
 use TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired;
 
+
+/**
+ * Hail Page Extension, adds OpenGraph supports and fields to every Hail page
+ *
+ * see @link {TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired] and @link {TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectExplicit} for fields description
+ *
+ * @package silverstripe-hail-elemental
+ * @author Marc Espiard, Firebrand
+ * @version 1.0
+ */
 class HailPageExtension extends DataExtension implements IOGObjectRequired
 {
     private $article = null;
