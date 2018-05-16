@@ -1,5 +1,5 @@
 {
-    "name": "firebrand/silverstripe-hail-opengraph",
+    "name": "firebrandhq/silverstripe-hail-opengraph",
     "description": "OpenGraph Extension for the SilverStripe Hail module",
     "type": "silverstripe-vendormodule",
     "keywords": [
