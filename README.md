@@ -24,6 +24,10 @@ composer require firebrandhq/silverstripe-hail-opengraph "^1.0"
 
 **Perform a dev/build (from sake or from a browser)**
 
+## Contributing
+
+[See CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## Versioning
 
 This library follows [Semver](http://semver.org). According to Semver, you will be able to upgrade to any minor or patch version of this library without any breaking changes to the public API. Semver also requires that we clearly define the public API for this library.
