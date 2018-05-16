@@ -36,7 +36,7 @@ All methods, with `public` visibility, are part of the public API. All other met
 
 ## Reporting Issues
 
-Please [create an issue](https://github.com/firebrandhq/silverstripe-hail/issues) for any bugs you've found, or features you're missing.  
+Please [create an issue](https://github.com/firebrandhq/silverstripe-hail-opengraph/issues) for any bugs you've found, or features you're missing.  
 
 ## Credits
 
