@@ -41,3 +41,4 @@ Please [create an issue](https://github.com/firebrandhq/silverstripe-hail-opengr
 ## Credits
 
 [SilverStripe OpenGraph by Tractorcow](https://github.com/tractorcow/silverstripe-opengraph)
+
