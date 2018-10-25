@@ -6,6 +6,7 @@ use Firebrand\Hail\Models\Article;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Convert;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataExtension;
 use TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired;
 
@@ -19,7 +20,7 @@ use TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired;
  * @author Marc Espiard, Firebrand
  * @version 1.0
  */
-class HailPageExtension extends DataExtension implements IOGObjectRequired
+class HailPageExtension extends Extension implements IOGObjectRequired
 {
     private $article = null;
 
