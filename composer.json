@@ -10,7 +10,7 @@
     ],
     "require": {
         "tractorcow/silverstripe-opengraph": "^4.0",
-        "firebrandhq/silverstripe-hail": "^4.0"
+        "firebrandhq/silverstripe-hail": "^4.1.11"
     },
     "license": "BSD-3-Clause",
     "authors": [
