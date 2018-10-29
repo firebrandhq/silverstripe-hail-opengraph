@@ -22,23 +22,10 @@ use TractorCow\OpenGraph\Interfaces\ObjectTypes\IOGObjectRequired;
  */
 class HailPageExtension extends Extension implements IOGObjectRequired
 {
-    private $article = null;
-
-    public function __construct()
-    {
-        $params = Controller::curr()->getRequest()->params();
-        if (isset($params['Action']) && $params['Action'] === "article" && isset($params['ID']) && !empty($params['ID'])) {
-            $article = Article::get()->filter(['HailID' => $params['ID']])->first();
-            if ($article) {
-                $this->article = $article;
-            }
-        }
-    }
-
     public function AbsoluteLink(&$link = null)
     {
-        if ($this->article) {
-            $link = Director::absoluteURL($this->article->Link(), true);
+        if (Controller::curr()->article) {
+            $link = Director::absoluteURL(Controller::curr()->article->Link(), true);
         }
 
         return $link;
@@ -46,12 +33,12 @@ class HailPageExtension extends Extension implements IOGObjectRequired
 
     public function getOGImage()
     {
-        if ($this->article) {
-            if ($this->article->hasHeroImage()) {
-                return $this->article->HeroImage()->Urloriginal;
+        if (Controller::curr()->article) {
+            if (Controller::curr()->article->hasHeroImage()) {
+                return Controller::curr()->article->HeroImage()->Urloriginal;
             }
-            if ($this->article->hasHeroVideo()) {
-                return $this->article->HeroVideo()->Urloriginal;
+            if (Controller::curr()->article->hasHeroVideo()) {
+                return Controller::curr()->article->HeroVideo()->Urloriginal;
             }
         }
 
@@ -60,8 +47,8 @@ class HailPageExtension extends Extension implements IOGObjectRequired
 
     public function getOGTitle()
     {
-        if ($this->article) {
-            return $this->article->Title;
+        if (Controller::curr()->article) {
+            return Controller::curr()->article->Title;
         }
 
         return $this->getOwner()->Title;
@@ -74,8 +61,8 @@ class HailPageExtension extends Extension implements IOGObjectRequired
 
     public function getOGDescription()
     {
-        if ($this->article) {
-            return Convert::html2raw($this->article->Lead);
+        if (Controller::curr()->article) {
+            return Convert::html2raw(Controller::curr()->article->Lead);
         }
 
         return Convert::html2raw($this->getOwner()->Content);
@@ -83,8 +70,8 @@ class HailPageExtension extends Extension implements IOGObjectRequired
 
     public function getOGVideo()
     {
-        if ($this->article && $this->article->hasHeroVideo()) {
-            return $this->article->HeroVideo()->OGLink();
+        if (Controller::curr()->article && Controller::curr()->article->hasHeroVideo()) {
+            return Controller::curr()->article->HeroVideo()->OGLink();
         }
 
         return null;
