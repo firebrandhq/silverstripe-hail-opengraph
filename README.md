@@ -1,6 +1,6 @@
 ![Hail.to](docs/images/hail-logo.png "hail.to")
 
-# This module is not need anymore for Silverstripe Hail version 4.4 and up
+### This module is not needed anymore for Silverstripe Hail version 4.4 and up, Open Graph is directly integrated into it.
 
 
 # OpenGraph module for SilverStripe Hail
